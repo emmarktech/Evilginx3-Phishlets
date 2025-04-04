@@ -1,4 +1,8 @@
-  # Updated Evilginx3 Phishlets
+# Join Chat
+
+Join group: https://t.me/evilginxgroup
+
+# Updated Evilginx3 Phishlets
 
 Are you a programmer, cybersecurity enthusiast, or a red/blue team member ready to move beyond basic Evilginx setup? This course is built for those who want to get hands-on with advanced phishlet development—from the ground up. Whether you're an entry-level developer eager to learn the ins and outs of reverse-proxy phishing or an experienced security professional looking to refine your skills, this masterclass will take you step-by-step through building and customizing phishlets that work in real-world engagements.
 
